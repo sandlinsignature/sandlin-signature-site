@@ -4,8 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sandlin Signature | Custom Homes | DFW</title>
+<meta name="description" content="Sandlin Signature designs and builds custom homes in DFW, including Hawthorne Estates in Northlake and the 2608 Southbay Circle spec home.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://sandlinsignature.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sandlin Signature">
+<meta property="og:title" content="Sandlin Signature | Custom Homes | DFW">
+<meta property="og:description" content="Custom homes in Northlake and the greater Dallas-Fort Worth area, plus the current 2608 Southbay Circle spec home.">
+<meta property="og:url" content="https://sandlinsignature.com/">
+<meta property="og:image" content="https://sandlinsignature.com/assets/hero-bg.jpg">
+<meta property="og:image:alt" content="Sandlin Signature custom home exterior">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sandlin Signature | Custom Homes | DFW">
+<meta name="twitter:description" content="Custom homes in Northlake and the greater Dallas-Fort Worth area, plus the current 2608 Southbay Circle spec home.">
+<meta name="twitter:image" content="https://sandlinsignature.com/assets/hero-bg.jpg">
+<meta name="theme-color" content="#1C1C1C">
+<link rel="icon" href="assets/monogram-logo.png">
+<link rel="apple-touch-icon" href="assets/monogram-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Sandlin Signature",
+  "url": "https://sandlinsignature.com/",
+  "email": "stephen@sandlinsignature.com",
+  "telephone": "+1-817-808-2568",
+  "description": "Custom homes in DFW, including Hawthorne Estates in Northlake and the 2608 Southbay Circle spec home.",
+  "areaServed": [
+    "Dallas-Fort Worth, TX",
+    "Northlake, TX",
+    "Argyle, TX",
+    "Denton County, TX"
+  ]
+}
+</script>
 <style>
 :root {
   --charcoal: #1C1C1C;
@@ -31,6 +65,7 @@ nav.scrolled { background: rgba(28,28,28,0.97); padding: 16px 48px; box-shadow: 
 .nav-logo > span { color: var(--linen); }
 .nav-logo > span span { color: var(--sand); }
 .nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links li { display: block; }
 .nav-links a { color: rgba(245,245,240,0.75); text-decoration: none; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
 .nav-links a:hover { color: var(--sand); }
 .nav-cta { background: var(--sand); color: var(--charcoal); padding: 10px 22px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: background 0.2s; }
@@ -38,7 +73,7 @@ nav.scrolled { background: rgba(28,28,28,0.97); padding: 16px 48px; box-shadow: 
 
 /* HERO */
 .hero {
-  height: 100vh; min-height: 700px;
+  height: 100svh; min-height: 680px;
   background: url('assets/hero-bg.jpg') center 30%/cover no-repeat;
   position: relative; display: flex; align-items: flex-end; padding-bottom: 80px;
 }
@@ -56,8 +91,8 @@ nav.scrolled { background: rgba(28,28,28,0.97); padding: 16px 48px; box-shadow: 
 .btn-outline:hover { border-color: var(--sand); color: var(--sand); }
 
 /* STAT BAR */
-.stat-bar { background: var(--charcoal); display: flex; justify-content: center; }
-.stat-item { flex: 1; max-width: 260px; text-align: center; padding: 28px 24px; border-right: 1px solid rgba(196,168,130,0.2); }
+.stat-bar { background: var(--charcoal); display: flex; justify-content: center; flex-wrap: wrap; }
+.stat-item { flex: 1 1 220px; max-width: 260px; text-align: center; padding: 28px 24px; border-right: 1px solid rgba(196,168,130,0.2); }
 .stat-item:last-child { border-right: none; }
 .stat-num { font-family: 'Cinzel', serif; color: var(--sand); font-size: 28px; display: block; margin-bottom: 4px; }
 .stat-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,245,240,0.5); font-weight: 500; }
@@ -74,7 +109,7 @@ section { padding: 90px 0; }
 /* STANDARD */
 .standard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 .standard-image { height: 580px; overflow: hidden; }
-.standard-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s; }
+.standard-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s; display: block; }
 .standard-image:hover img { transform: scale(1.03); }
 .standard-copy .section-body { margin-bottom: 20px; }
 
@@ -99,7 +134,7 @@ section { padding: 90px 0; }
 .spec-images { display: flex; flex-direction: column; gap: 0; }
 .spec-img-main { width: 100%; height: 400px; object-fit: cover; object-position: center 60%; }
 .spec-img-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
-.spec-img-row img { width: 100%; height: 160px; object-fit: cover; }
+.spec-img-row img { width: 100%; height: 160px; object-fit: cover; display: block; }
 .spec-address { font-family: 'Cinzel', serif; font-size: 22px; letter-spacing: 0.05em; color: var(--charcoal); margin-bottom: 6px; margin-top: 8px; }
 .spec-location { font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--oak); margin-bottom: 24px; font-weight: 500; }
 .spec-price { font-family: 'Cinzel', serif; font-size: 32px; color: var(--charcoal); margin-bottom: 28px; }
@@ -126,11 +161,70 @@ section { padding: 90px 0; }
 .floor-plan-link:hover { color: var(--charcoal); }
 .floor-plan-card img { width: 100%; height: auto; display: block; border: 1px solid rgba(196,168,130,0.14); background: #fff; }
 
+/* LEAD CAPTURE */
+#lead { background: linear-gradient(180deg, rgba(28,28,28,0.03) 0%, rgba(28,28,28,0) 100%); }
+.lead-header { text-align: center; margin-bottom: 40px; }
+.lead-header .section-body { margin: 0 auto; }
+.lead-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
+.lead-card { border: 1px solid rgba(196,168,130,0.28); background: rgba(255,255,255,0.72); padding: 28px; box-shadow: 0 16px 40px rgba(28,28,28,0.05); }
+.lead-card.dark { background: var(--charcoal); color: var(--linen); }
+.lead-card h3 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 400; line-height: 1.2; margin-bottom: 12px; color: inherit; }
+.lead-card .section-body { max-width: none; margin-bottom: 18px; }
+.lead-card.dark .section-body { color: rgba(245,245,240,0.68); }
+.lead-points { list-style: none; display: grid; gap: 10px; margin: 18px 0 0; }
+.lead-points li { position: relative; padding-left: 16px; font-size: 13px; line-height: 1.55; color: #555; }
+.lead-points li::before { content: "\2022"; color: var(--sand); position: absolute; left: 0; }
+.lead-card.dark .lead-points li { color: rgba(245,245,240,0.72); }
+.lead-form { display: grid; gap: 14px; margin-top: 18px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--oak); font-weight: 600; }
+.lead-card.dark .form-field label { color: var(--sand); }
+.form-field input, .form-field select, .form-field textarea {
+  width: 100%;
+  border: 1px solid rgba(196,168,130,0.35);
+  background: rgba(255,255,255,0.92);
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--charcoal);
+  outline: none;
+}
+.lead-card.dark .form-field input,
+.lead-card.dark .form-field select,
+.lead-card.dark .form-field textarea {
+  background: rgba(255,255,255,0.08);
+  color: var(--linen);
+  border-color: rgba(245,245,240,0.18);
+}
+.form-field textarea { min-height: 116px; resize: vertical; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+  border-color: var(--oak);
+  box-shadow: 0 0 0 3px rgba(196,168,130,0.15);
+}
+.form-submit {
+  border: none;
+  background: var(--sand);
+  color: var(--charcoal);
+  padding: 14px 24px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.form-submit:hover { background: var(--oak); color: var(--linen); }
+.lead-card.dark .form-submit { background: var(--linen); color: var(--charcoal); }
+.lead-card.dark .form-submit:hover { background: var(--sand); }
+.form-note { font-size: 12px; line-height: 1.6; color: #666; }
+.lead-card.dark .form-note { color: rgba(245,245,240,0.55); }
+
 /* LOT NEXT DOOR */
 #lot { background: var(--earth); padding: 80px 0; }
 .lot-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 .lot-img-wrap { position: relative; height: 420px; overflow: hidden; }
-.lot-img-wrap img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
+.lot-img-wrap img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; display: block; }
 .lot-img-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(58,53,48,0.2); }
 .lot-cs-badge { font-family: 'Cinzel', serif; letter-spacing: 0.3em; font-size: 13px; color: var(--sand); text-transform: uppercase; border: 1px solid var(--sand); padding: 12px 28px; }
 .lot-copy .section-eyebrow { color: var(--sand); }
@@ -156,7 +250,7 @@ section { padding: 90px 0; }
 /* ABOUT */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .about-image { height: 540px; overflow: hidden; }
-.about-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.about-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; display: block; }
 .about-image:hover img { transform: scale(1.03); }
 .about-copy .section-body { margin-bottom: 20px; }
 .about-legacy { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.08em; color: var(--sand); margin-top: 24px; border-left: 2px solid var(--sand); padding-left: 16px; line-height: 1.6; }
@@ -188,10 +282,11 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
   .nav-links { display: none; }
   .hero-content { padding: 0 24px; }
   .container { padding: 0 24px; }
-  .standard-grid, .spec-layout, .lot-inner, .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .standard-grid, .spec-layout, .lead-grid, .lot-inner, .about-grid { grid-template-columns: 1fr; gap: 32px; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
   .process-grid { grid-template-columns: 1fr 1fr; }
   .standard-image, .about-image { height: 340px; }
+  .hero { min-height: 92svh; padding-bottom: 56px; }
   footer { flex-direction: column; text-align: center; }
 }
 @media (max-width: 560px) {
@@ -201,6 +296,8 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
   .spec-fact:nth-child(2n) { border-right: none; }
   .feature-list { grid-template-columns: 1fr; }
   .spec-img-row { grid-template-columns: 1fr 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .stat-item { flex-basis: 50%; max-width: none; }
 }
 </style>
 </head>
@@ -211,6 +308,7 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#spec">For Sale</a></li>
+    <li><a href="#lead">Inquire</a></li>
     <li><a href="#lot">Coming Soon</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#about">About</a></li>
@@ -221,9 +319,9 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <span class="hero-eyebrow">Northlake, Texas · Hawthorne Estates</span>
+    <span class="hero-eyebrow">Northlake, Texas &middot; Hawthorne Estates</span>
     <h1>Built to Last.<br>Built Different.</h1>
-    <p class="hero-sub">Custom homes built to a generational standard in the Dallas–Fort Worth corridor. Third-generation craftsmanship. Every detail intentional.</p>
+    <p class="hero-sub">Custom homes built to a generational standard in the Dallas - Fort Worth corridor. Third-generation craftsmanship. Every detail intentional.</p>
     <a href="#spec" class="btn-primary">View Current Build</a>
     <a href="#contact" class="btn-outline">Start a Conversation</a>
   </div>
@@ -247,8 +345,8 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
       <div class="standard-copy">
         <span class="section-eyebrow">The Sandlin Standard</span>
         <h2 class="section-title">Every Home Carries<br>a Legacy</h2>
-        <p class="section-body">My grandfather built Sandlin Homes. I grew up watching what it means to build something that lasts — not just the structure, but the relationship with the family behind the purchase. Sandlin Signature continues that standard with every home we build.</p>
-        <p class="section-body">We don't cut corners because no one's looking. We build the way we'd build for ourselves — with custom cabinetry, real stone, solid wood, and details that get noticed years down the road.</p>
+        <p class="section-body">My grandfather built Sandlin Homes. I grew up watching what it means to build something that lasts - not just the structure, but the relationship with the family behind the purchase. Sandlin Signature continues that standard with every home we build.</p>
+        <p class="section-body">We don't cut corners because no one's looking. We build the way we'd build for ourselves - with custom cabinetry, real stone, solid wood, and details that get noticed years down the road.</p>
         <a href="#contact" class="btn-primary" style="margin-top:24px;">Build With Us</a>
       </div>
     </div>
@@ -262,7 +360,7 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
       <span class="section-eyebrow">The Work</span>
       <h2 class="section-title light">2608 Southbay Circle</h2>
       <div class="gallery-cta">
-        <a href="https://order.altitudevisualsdfw.com/sites/rppvzqvo/unbranded" class="btn-gallery" target="_blank" rel="noopener">High-Res Photos</a>
+        <a href="https://order.altitudevisualsdfw.com/sites/rppvzqvo/unbranded" class="btn-gallery" target="_blank" rel="noopener noreferrer">High-Res Photos</a>
       </div>
     </div>
     <div class="gallery-grid">
@@ -392,6 +490,110 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
   </div>
 </section>
 
+<!-- LEAD CAPTURE -->
+<section id="lead">
+  <div class="container">
+    <div class="lead-header">
+      <span class="section-eyebrow">Get in Touch</span>
+      <h2 class="section-title">Turn Interest Into a Lead</h2>
+      <p class="section-body">If someone loves the spec home or wants to build custom, this is where we collect their info and start the conversation.</p>
+    </div>
+    <div class="lead-grid">
+      <article class="lead-card">
+        <span class="spec-badge">2608 Southbay</span>
+        <h3>Request the spec sheet and price updates</h3>
+        <p class="section-body">Use this form for buyers who want the floor plan, specs, and the latest availability on the current home.</p>
+        <form class="lead-form" action="https://formsubmit.co/stephen@sandlinsignature.com" method="POST">
+          <input type="hidden" name="_subject" value="2608 Southbay lead">
+          <input type="hidden" name="_next" value="https://sandlinsignature.com/thank-you.html">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="spec-name">Full name</label>
+              <input id="spec-name" name="name" type="text" required>
+            </div>
+            <div class="form-field">
+              <label for="spec-phone">Phone</label>
+              <input id="spec-phone" name="phone" type="tel" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="spec-email">Email</label>
+              <input id="spec-email" name="email" type="email" required>
+            </div>
+            <div class="form-field">
+              <label for="spec-interest">Interest</label>
+              <select id="spec-interest" name="interest" required>
+                <option value="2608 Southbay spec home">2608 Southbay spec home</option>
+                <option value="Future spec homes">Future spec homes</option>
+                <option value="Custom build">Custom build</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="spec-message">What would you like to know?</label>
+            <textarea id="spec-message" name="message" placeholder="Tell us what you want to see, what questions you have, or if you'd like a private showing." required></textarea>
+          </div>
+          <button class="form-submit" type="submit">Send Me the Details</button>
+          <p class="form-note">No spam. Just the information you asked for and the next step if you want it.</p>
+        </form>
+        <ul class="lead-points">
+          <li>Great for spec home buyers</li>
+          <li>Collects name, phone, and email</li>
+          <li>Can be used for showings, pricing, and follow-up</li>
+        </ul>
+      </article>
+      <article class="lead-card dark">
+        <span class="spec-badge" style="background: var(--linen); color: var(--charcoal);">Custom Builds</span>
+        <h3>Start a custom build conversation</h3>
+        <p class="section-body">Use this form for people who want to build on their own lot, need help finding land, or are just starting to plan.</p>
+        <form class="lead-form" action="https://formsubmit.co/stephen@sandlinsignature.com" method="POST">
+          <input type="hidden" name="_subject" value="Custom build lead">
+          <input type="hidden" name="_next" value="https://sandlinsignature.com/thank-you.html">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="build-name">Full name</label>
+              <input id="build-name" name="name" type="text" required>
+            </div>
+            <div class="form-field">
+              <label for="build-phone">Phone</label>
+              <input id="build-phone" name="phone" type="tel" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="build-email">Email</label>
+              <input id="build-email" name="email" type="email" required>
+            </div>
+            <div class="form-field">
+              <label for="build-timeline">Timeline</label>
+              <select id="build-timeline" name="timeline" required>
+                <option value="Just exploring">Just exploring</option>
+                <option value="3-6 months">3-6 months</option>
+                <option value="6-12 months">6-12 months</option>
+                <option value="Ready now">Ready now</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="build-message">Tell us about your project</label>
+            <textarea id="build-message" name="message" placeholder="Own a lot already? Need land? Thinking about budget or floor plan size? Tell us what you have in mind." required></textarea>
+          </div>
+          <button class="form-submit" type="submit">Start the Conversation</button>
+          <p class="form-note">If they're serious about building, this gets them out of passive browsing and into your pipeline.</p>
+        </form>
+        <ul class="lead-points">
+          <li>Perfect for custom build inquiries</li>
+          <li>Helps qualify lot, budget, and timeline</li>
+          <li>Sets the tone for a real builder conversation</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- LOT NEXT DOOR -->
 <section id="lot">
   <div class="container">
@@ -401,9 +603,9 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
         <div class="lot-img-overlay"><span class="lot-cs-badge">Coming Soon</span></div>
       </div>
       <div class="lot-copy">
-        <span class="section-eyebrow">Next Project · Hawthorne Estates</span>
+        <span class="section-eyebrow">Next Project &middot; Hawthorne Estates</span>
         <h2 class="section-title light">The Lot Next Door<br>Is Available</h2>
-        <p class="section-body">The adjacent lot to 2608 Southbay is available now. Build-to-suit on your timeline — bring a plan or we'll design one together. Or stay tuned: a new Sandlin Signature spec is in the works on this lot.</p>
+        <p class="section-body">The adjacent lot to 2608 Southbay is available now. Build-to-suit on your timeline - bring a plan or we'll design one together. Or stay tuned: a new Sandlin Signature spec is in the works on this lot.</p>
         <div class="lot-details">
           <div class="ld-item"><span class="ld-label">Location</span><span class="ld-value">Hawthorne Estates</span></div>
           <div class="ld-item"><span class="ld-label">School District</span><span class="ld-value">Argyle ISD</span></div>
@@ -423,9 +625,9 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
       <h2 class="section-title light">The Sandlin Process</h2>
     </div>
     <div class="process-grid">
-      <div class="process-step"><span class="step-num">01</span><div class="step-title">Consultation</div><p class="step-body">We start with a conversation — your lot, your plan, your budget. No pressure, no pitch. Just an honest discussion about what's possible.</p></div>
-      <div class="process-step"><span class="step-num">02</span><div class="step-title">Design &amp; Planning</div><p class="step-body">We work through floor plans, finishes, and selections together. Every decision is yours — we just make sure it's buildable, beautiful, and on budget.</p></div>
-      <div class="process-step"><span class="step-num">03</span><div class="step-title">The Build</div><p class="step-body">We build with our own vetted trades — people we trust. Consistent supervision. Transparent timeline. You'll always know where we are.</p></div>
+      <div class="process-step"><span class="step-num">01</span><div class="step-title">Consultation</div><p class="step-body">We start with a conversation - your lot, your plan, your budget. No pressure, no pitch. Just an honest discussion about what's possible.</p></div>
+      <div class="process-step"><span class="step-num">02</span><div class="step-title">Design &amp; Planning</div><p class="step-body">We work through floor plans, finishes, and selections together. Every decision is yours - we just make sure it's buildable, beautiful, and on budget.</p></div>
+      <div class="process-step"><span class="step-num">03</span><div class="step-title">The Build</div><p class="step-body">We build with our own vetted trades - people we trust. Consistent supervision. Transparent timeline. You'll always know where we are.</p></div>
       <div class="process-step"><span class="step-num">04</span><div class="step-title">Your Home</div><p class="step-body">We don't hand you keys and disappear. Every Sandlin Signature home comes with our commitment to stand behind the build long after closing.</p></div>
     </div>
   </div>
@@ -438,7 +640,7 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
       <div class="about-copy">
         <span class="section-eyebrow">About Sandlin Signature</span>
         <h2 class="section-title">Third Generation.<br>One Standard.</h2>
-        <p class="section-body">I'm Stephen Sandlin. My grandfather founded Sandlin Homes decades ago in DFW. I grew up on job sites — learning what it means to build something with permanence. After more than a decade in the industry, I launched Sandlin Signature to build custom and spec homes the way I believe they should be built.</p>
+        <p class="section-body">I'm Stephen Sandlin. My grandfather founded Sandlin Homes decades ago in DFW. I grew up on job sites - learning what it means to build something with permanence. After more than a decade in the industry, I launched Sandlin Signature to build custom and spec homes the way I believe they should be built.</p>
         <p class="section-body">Premium finishes. Honest pricing. Real supervision on every build. No shortcuts. Every detail is intentional. Every build carries the Sandlin standard.</p>
         <blockquote class="about-legacy">"Built on a legacy of craftsmanship.<br>Every home is a signature."</blockquote>
       </div>
@@ -455,13 +657,13 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
     <div class="contact-inner">
       <span class="section-eyebrow">Begin Your Build</span>
       <h2 class="section-title light" style="margin-bottom:16px;">Let's Build<br>Something Together</h2>
-      <p class="contact-sub">Whether you have a lot, a plan, or just an idea — reach out. Every Sandlin Signature home starts with a conversation.</p>
+      <p class="contact-sub">Whether you have a lot, a plan, or just an idea - reach out. Every Sandlin Signature home starts with a conversation.</p>
       <div class="contact-row">
         <a href="tel:8178082568" class="contact-item"><span class="ci-label">Call or Text</span><span class="ci-value">(817) 808-2568</span></a>
         <div class="contact-div"></div>
         <a href="mailto:stephen@sandlinsignature.com" class="contact-item"><span class="ci-label">Email</span><span class="ci-value">stephen@sandlinsignature.com</span></a>
       </div>
-      <p class="contact-tagline">Dallas – Fort Worth &nbsp;·&nbsp; Custom Homes &nbsp;·&nbsp; Built to Last</p>
+      <p class="contact-tagline">Dallas - Fort Worth &nbsp;&middot;&nbsp; Custom Homes &nbsp;&middot;&nbsp; Built to Last</p>
     </div>
   </div>
 </section>
@@ -472,6 +674,7 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
   <div class="footer-links">
     <a href="#work">Work</a>
     <a href="#spec">For Sale</a>
+    <a href="#lead">Inquire</a>
     <a href="#process">Process</a>
     <a href="#contact">Contact</a>
   </div>

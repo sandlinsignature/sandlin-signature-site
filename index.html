@@ -909,6 +909,33 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
       modals.forEach((modal) => closeModal(modal));
     }
   });
+
+  // BuilderOS webhook — mirror form submissions to Command Center
+  const BUILDEROS_WEBHOOK = 'https://builderos.sandlinsignature.com/api/webhooks/website';
+  document.querySelectorAll('form.lead-form').forEach((form) => {
+    form.addEventListener('submit', () => {
+      const data = Object.fromEntries(new FormData(form));
+      const subject = data._subject || '';
+      const payload = {
+        name: data.name || '',
+        email: data.email || '',
+        phone: data.phone || '',
+        message: data.message || '',
+        source: subject.includes('Southbay') ? 'Spec Home Inquiry'
+              : subject.includes('lot') ? 'Land/Lot Inquiry'
+              : subject.includes('Custom') ? 'Custom Build Consult'
+              : 'Website Inquiry',
+        timeline: data.timeline || '',
+        interest: data.interest || '',
+        externalSource: 'sandlinsignature.com',
+      };
+      fetch(BUILDEROS_WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      }).catch(() => {});
+    });
+  });
 </script>
 </body>
 </html>

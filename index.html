@@ -911,29 +911,38 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
     }
   });
 
-  // BuilderOS webhook — mirror form submissions to Command Center
-  const BUILDEROS_WEBHOOK = 'https://builderos.sandlinsignature.com/api/webhooks/website';
+  // BuilderOS webhook — send every lead-form submission to the Command Center
+  // (alongside Formspree, until Formspree is retired). `keepalive` lets the
+  // request complete even though the native Formspree submit navigates away.
+  const BUILDEROS_WEBHOOK = 'https://web-production-b51bb.up.railway.app/api/webhooks/website';
   document.querySelectorAll('form.lead-form').forEach((form) => {
     form.addEventListener('submit', () => {
       const data = Object.fromEntries(new FormData(form));
       const subject = data._subject || '';
+      const source = /southbay/i.test(subject) ? 'Southbay Spec Inquiry'
+                   : /custom/i.test(subject) ? 'Custom Build Consult'
+                   : /lot|land/i.test(subject) ? 'Land/Lot Inquiry'
+                   : 'Website Inquiry';
+      const extra = [
+        data.interest ? `Interest: ${data.interest}` : '',
+        data.timeline ? `Timeline: ${data.timeline}` : '',
+      ].filter(Boolean).join(' | ');
       const payload = {
         name: data.name || '',
         email: data.email || '',
         phone: data.phone || '',
-        message: data.message || '',
-        source: subject.includes('Southbay') ? 'Spec Home Inquiry'
-              : subject.includes('lot') ? 'Land/Lot Inquiry'
-              : subject.includes('Custom') ? 'Custom Build Consult'
-              : 'Website Inquiry',
+        message: [data.message || '', extra].filter(Boolean).join('\n'),
+        source,
         timeline: data.timeline || '',
-        interest: data.interest || '',
+        formType: /southbay/i.test(subject) ? 'open-house'
+                : /custom/i.test(subject) ? 'consult' : '',
         externalSource: 'sandlinsignature.com',
       };
       fetch(BUILDEROS_WEBHOOK, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
+        keepalive: true,
       }).catch(() => {});
     });
   });

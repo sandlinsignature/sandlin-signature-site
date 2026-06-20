@@ -911,12 +911,14 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
     }
   });
 
-  // BuilderOS webhook — send every lead-form submission to the Command Center
-  // (alongside Formspree, until Formspree is retired). `keepalive` lets the
-  // request complete even though the native Formspree submit navigates away.
+  // BuilderOS webhook — PRIMARY submission for every lead form (no longer
+  // depends on Formspree). Submits to the Command Center, then shows the
+  // thank-you page on success or a graceful contact message on failure.
   const BUILDEROS_WEBHOOK = 'https://web-production-b51bb.up.railway.app/api/webhooks/website';
+  const CONTACT_FALLBACK = 'Something went wrong sending your message. Please call or text us at (817) 808-2568, or email stephen@sandlinsignature.com.';
   document.querySelectorAll('form.lead-form').forEach((form) => {
-    form.addEventListener('submit', () => {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
       const data = Object.fromEntries(new FormData(form));
       const subject = data._subject || '';
       const source = /southbay/i.test(subject) ? 'Southbay Spec Inquiry'
@@ -938,12 +940,25 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
                 : /custom/i.test(subject) ? 'consult' : '',
         externalSource: 'sandlinsignature.com',
       };
-      fetch(BUILDEROS_WEBHOOK, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-        keepalive: true,
-      }).catch(() => {});
+
+      const btn = form.querySelector('[type="submit"]');
+      const note = form.querySelector('.form-note');
+      const btnText = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      if (note) note.style.color = '';
+
+      try {
+        const res = await fetch(BUILDEROS_WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error('Request failed: ' + res.status);
+        window.location.href = data._redirect || 'https://sandlinsignature.com/thank-you.html';
+      } catch (err) {
+        if (note) { note.textContent = CONTACT_FALLBACK; note.style.color = '#b34a32'; }
+        if (btn) { btn.disabled = false; btn.textContent = btnText; }
+      }
     });
   });
 </script>

@@ -168,6 +168,12 @@ blockquote {
 .btn-outline:hover { border-color: var(--sand); color: var(--sand); }
 
 footer { background: var(--earth); padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.assoc { flex: 0 0 100%; border-bottom: 1px solid rgba(196,168,130,0.22); padding-bottom: 22px; margin-bottom: 8px; }
+.assoc-label { font-family: 'Cinzel', serif; text-transform: uppercase; letter-spacing: 0.18em; font-size: 10px; color: rgba(196,168,130,0.8); text-align: center; margin-bottom: 16px; }
+.assoc-row { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+.assoc-row img { display: block; height: 40px; width: auto; }
+.assoc-row img.nahb { height: 46px; }
+@media (max-width: 640px) { .assoc-row { gap: 26px; } .assoc-row img { height: 30px; } .assoc-row img.nahb { height: 36px; } }
 .footer-logo { font-family: 'Cinzel', serif; letter-spacing: 0.15em; color: var(--linen); font-size: 12px; }
 .footer-logo span { color: var(--sand); }
 .footer-copy { font-size: 10px; color: rgba(245,245,240,0.35); letter-spacing: 0.08em; }
@@ -196,7 +202,7 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
     <li><a href="/#spec">For Sale</a></li>
     <li><a href="/#lead2">Inquire</a></li>
     <li><a href="/#process">Process</a></li>
-    <li><a href="/#about">About</a></li>
+    <li><a href="/blog" class="active">Blog</a></li>
   </ul>
   <a href="https://start.sandlinsignature.com" class="nav-cta" target="_blank" rel="noopener noreferrer">Start a Conversation</a>
 </nav>
@@ -312,6 +318,14 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
 </section>
 
 <footer>
+  <div class="assoc">
+    <div class="assoc-label">Proud Member</div>
+    <div class="assoc-row">
+      <img class="nahb" src="/assets/assoc-nahb.png" alt="National Association of Home Builders member" loading="lazy">
+      <img src="/assets/assoc-gfwba.png" alt="Greater Fort Worth Builders Association member" loading="lazy">
+      <img src="/assets/assoc-tab.png" alt="Texas Association of Builders member" loading="lazy">
+    </div>
+  </div>
   <div class="footer-logo">SANDLIN <span>SIGNATURE</span></div>
   <span class="footer-copy">&copy; 2026 Sandlin Signature. All rights reserved.</span>
   <div class="footer-links">
@@ -319,6 +333,7 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
     <a href="/#spec">For Sale</a>
     <a href="/#lead2">Inquire</a>
     <a href="/#process">Process</a>
+    <a href="/blog">Blog</a>
     <a href="/#contact">Contact</a>
   </div>
 </footer>

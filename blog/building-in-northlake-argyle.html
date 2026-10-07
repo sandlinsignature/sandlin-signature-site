@@ -16,6 +16,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Building a Custom Home in Northlake &amp; Argyle ISD (2026 Guide)">
 <meta name="twitter:description" content="Lot availability, land prices, site work, permits, and schools in the North DFW corridor.">
+<meta name="theme-color" content="#1C1C1C">
+<link rel="icon" href="/assets/monogram-logo.png">
+<link rel="apple-touch-icon" href="/assets/monogram-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -146,6 +149,12 @@ blockquote {
 .btn-outline:hover { border-color: var(--sand); color: var(--sand); }
 
 footer { background: var(--earth); padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.assoc { flex: 0 0 100%; border-bottom: 1px solid rgba(196,168,130,0.22); padding-bottom: 22px; margin-bottom: 8px; }
+.assoc-label { font-family: 'Cinzel', serif; text-transform: uppercase; letter-spacing: 0.18em; font-size: 10px; color: rgba(196,168,130,0.8); text-align: center; margin-bottom: 16px; }
+.assoc-row { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+.assoc-row img { display: block; height: 40px; width: auto; }
+.assoc-row img.nahb { height: 46px; }
+@media (max-width: 640px) { .assoc-row { gap: 26px; } .assoc-row img { height: 30px; } .assoc-row img.nahb { height: 36px; } }
 .footer-logo { font-family: 'Cinzel', serif; letter-spacing: 0.15em; color: var(--linen); font-size: 12px; }
 .footer-logo span { color: var(--sand); }
 .footer-copy { font-size: 10px; color: rgba(245,245,240,0.35); letter-spacing: 0.08em; }
@@ -157,9 +166,12 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
   nav { padding: 16px 24px; }
   .nav-links { display: none; }
   .article-hero { padding: 130px 0 50px; }
+  .cost-table td:first-child, .cost-table td:nth-child(2) { white-space: normal; }
+  .cost-table th, .cost-table td { padding: 10px 8px; }
   footer { flex-direction: column; text-align: center; }
 }
-</style></head>
+</style><!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "04f7edb2336a4e26b00a64a835b75f8b"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
 <body>
 
 <nav id="nav">
@@ -169,7 +181,7 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
     <li><a href="/#spec">For Sale</a></li>
     <li><a href="/#lead2">Inquire</a></li>
     <li><a href="/#process">Process</a></li>
-    <li><a href="/#about">About</a></li>
+    <li><a href="/blog" class="active">Blog</a></li>
   </ul>
   <a href="https://start.sandlinsignature.com" class="nav-cta" target="_blank" rel="noopener noreferrer">Start a Conversation</a>
 </nav>
@@ -303,6 +315,14 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
 </section>
 
 <footer>
+  <div class="assoc">
+    <div class="assoc-label">Proud Member</div>
+    <div class="assoc-row">
+      <img class="nahb" src="/assets/assoc-nahb.png" alt="National Association of Home Builders member" loading="lazy">
+      <img src="/assets/assoc-gfwba.png" alt="Greater Fort Worth Builders Association member" loading="lazy">
+      <img src="/assets/assoc-tab.png" alt="Texas Association of Builders member" loading="lazy">
+    </div>
+  </div>
   <div class="footer-logo">SANDLIN <span>SIGNATURE</span></div>
   <span class="footer-copy">&copy; 2026 Sandlin Signature. All rights reserved.</span>
   <div class="footer-links">
@@ -310,6 +330,7 @@ footer { background: var(--earth); padding: 28px 48px; display: flex; align-item
     <a href="/#spec">For Sale</a>
     <a href="/#lead2">Inquire</a>
     <a href="/#process">Process</a>
+    <a href="/blog">Blog</a>
     <a href="/#contact">Contact</a>
   </div>
 </footer>

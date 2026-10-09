@@ -311,6 +311,10 @@ section { padding: 90px 0; }
 .form-submit:hover { background: var(--oak); color: var(--linen); }
 .modal.dark .form-submit { background: var(--linen); color: var(--charcoal); }
 .modal.dark .form-submit:hover { background: var(--sand); }
+.consent { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; line-height: 1.55; color: #666; }
+.consent input { margin-top: 3px; flex: 0 0 auto; accent-color: #C4A882; width: auto; }
+.consent a, .form-note a { color: inherit; text-decoration: underline; }
+.modal.dark .consent { color: rgba(245,245,240,0.7); }
 .form-note { font-size: 12px; line-height: 1.6; color: #666; }
 .modal.dark .form-note { color: rgba(245,245,240,0.55); }
 
@@ -730,8 +734,32 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
         <label for="spec-message">What would you like to know?</label>
         <textarea id="spec-message" name="message" placeholder="Tell us if you'd like a private showing, more photos, pricing details, or something else." required></textarea>
       </div>
+      <div class="form-field">
+        <label for="spec-heard">How did you hear about us?</label>
+        <select id="spec-heard" name="heard_about" required>
+          <option value="">Select one</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="LinkedIn">LinkedIn</option>
+          <option value="Google search">Google search</option>
+          <option value="ChatGPT or another AI tool">ChatGPT or another AI tool</option>
+          <option value="Realtor or lender referral">Realtor or lender referral</option>
+          <option value="Friend or past client">Friend or past client</option>
+          <option value="Drove by the home or yard sign">Drove by the home or yard sign</option>
+          <option value="Mailer">Mailer</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <input type="hidden" name="utm_source">
+      <input type="hidden" name="utm_medium">
+      <input type="hidden" name="utm_campaign">
+      <input type="hidden" name="page_url">
+      <label class="consent">
+        <input type="checkbox" name="consent_sms" value="yes">
+        <span>Yes, text me about my inquiry at the number above. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of any purchase or service. See our <a href="/privacy">Privacy Policy</a>.</span>
+      </label>
       <button class="form-submit" type="submit">Request Info</button>
-      <p class="form-note">We’ll send the details and keep the conversation simple and direct.</p>
+      <p class="form-note">By submitting, you agree we may contact you by email and phone about your inquiry. We never sell your information. <a href="/privacy">Privacy Policy</a>.</p>
     </form>
   </div>
 </div>
@@ -774,8 +802,36 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
         <label for="build-message">Tell us about your project</label>
         <textarea id="build-message" name="message" placeholder="Do you already have land? Need help finding it? Have a rough budget or floor plan size in mind?" required></textarea>
       </div>
+      <div class="form-field">
+        <label for="build-heard">How did you hear about us?</label>
+        <select id="build-heard" name="heard_about" required>
+          <option value="">Select one</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="LinkedIn">LinkedIn</option>
+          <option value="Google search">Google search</option>
+          <option value="ChatGPT or another AI tool">ChatGPT or another AI tool</option>
+          <option value="Realtor or lender referral">Realtor or lender referral</option>
+          <option value="Friend or past client">Friend or past client</option>
+          <option value="Drove by the home or yard sign">Drove by the home or yard sign</option>
+          <option value="Mailer">Mailer</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="build-lot">Lot address or area (if you have one)</label>
+        <input id="build-lot" name="lot_address" type="text" placeholder="Address, subdivision, or city">
+      </div>
+      <input type="hidden" name="utm_source">
+      <input type="hidden" name="utm_medium">
+      <input type="hidden" name="utm_campaign">
+      <input type="hidden" name="page_url">
+      <label class="consent">
+        <input type="checkbox" name="consent_sms" value="yes">
+        <span>Yes, text me about my inquiry at the number above. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of any purchase or service. See our <a href="/privacy">Privacy Policy</a>.</span>
+      </label>
       <button class="form-submit" type="submit">Start the Conversation</button>
-      <p class="form-note">The more you share, the easier it is for us to point you in the right direction.</p>
+      <p class="form-note">By submitting, you agree we may contact you by email and phone about your inquiry. We never sell your information. <a href="/privacy">Privacy Policy</a>.</p>
     </form>
   </div>
 </div>
@@ -886,8 +942,32 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
         <label for="spec2-message">What would you like to know?</label>
         <textarea id="spec2-message" name="message" placeholder="Tell us if you'd like a private showing or have any questions about the home." required></textarea>
       </div>
+      <div class="form-field">
+        <label for="spec2-heard">How did you hear about us?</label>
+        <select id="spec2-heard" name="heard_about" required>
+          <option value="">Select one</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="LinkedIn">LinkedIn</option>
+          <option value="Google search">Google search</option>
+          <option value="ChatGPT or another AI tool">ChatGPT or another AI tool</option>
+          <option value="Realtor or lender referral">Realtor or lender referral</option>
+          <option value="Friend or past client">Friend or past client</option>
+          <option value="Drove by the home or yard sign">Drove by the home or yard sign</option>
+          <option value="Mailer">Mailer</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <input type="hidden" name="utm_source">
+      <input type="hidden" name="utm_medium">
+      <input type="hidden" name="utm_campaign">
+      <input type="hidden" name="page_url">
+      <label class="consent">
+        <input type="checkbox" name="consent_sms" value="yes">
+        <span>Yes, text me about my inquiry at the number above. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of any purchase or service. See our <a href="/privacy">Privacy Policy</a>.</span>
+      </label>
       <button class="form-submit" type="submit">Request Info</button>
-      <p class="form-note">We’ll send the details and keep the conversation simple and direct.</p>
+      <p class="form-note">By submitting, you agree we may contact you by email and phone about your inquiry. We never sell your information. <a href="/privacy">Privacy Policy</a>.</p>
     </form>
   </div>
 </div>
@@ -930,8 +1010,36 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
         <label for="build2-message">Tell us about your project</label>
         <textarea id="build2-message" name="message" placeholder="Do you already have land? Need help finding it? Have a rough budget or floor plan size in mind?" required></textarea>
       </div>
+      <div class="form-field">
+        <label for="build2-heard">How did you hear about us?</label>
+        <select id="build2-heard" name="heard_about" required>
+          <option value="">Select one</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="LinkedIn">LinkedIn</option>
+          <option value="Google search">Google search</option>
+          <option value="ChatGPT or another AI tool">ChatGPT or another AI tool</option>
+          <option value="Realtor or lender referral">Realtor or lender referral</option>
+          <option value="Friend or past client">Friend or past client</option>
+          <option value="Drove by the home or yard sign">Drove by the home or yard sign</option>
+          <option value="Mailer">Mailer</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="build2-lot">Lot address or area (if you have one)</label>
+        <input id="build2-lot" name="lot_address" type="text" placeholder="Address, subdivision, or city">
+      </div>
+      <input type="hidden" name="utm_source">
+      <input type="hidden" name="utm_medium">
+      <input type="hidden" name="utm_campaign">
+      <input type="hidden" name="page_url">
+      <label class="consent">
+        <input type="checkbox" name="consent_sms" value="yes">
+        <span>Yes, text me about my inquiry at the number above. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of any purchase or service. See our <a href="/privacy">Privacy Policy</a>.</span>
+      </label>
       <button class="form-submit" type="submit">Start the Conversation</button>
-      <p class="form-note">The more you share, the easier it is for us to point you in the right direction.</p>
+      <p class="form-note">By submitting, you agree we may contact you by email and phone about your inquiry. We never sell your information. <a href="/privacy">Privacy Policy</a>.</p>
     </form>
   </div>
 </div>
@@ -1035,6 +1143,17 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
     }
   });
 
+  // UTM + page URL capture for lead forms
+  try {
+    const q = new URLSearchParams(location.search);
+    ['utm_source','utm_medium','utm_campaign'].forEach((k) => {
+      let v = q.get(k) || '';
+      try { if (v) sessionStorage.setItem(k, v); else v = sessionStorage.getItem(k) || ''; } catch (e) {}
+      document.querySelectorAll('form.lead-form input[name="' + k + '"]').forEach((el) => { el.value = v; });
+    });
+    document.querySelectorAll('form.lead-form input[name="page_url"]').forEach((el) => { el.value = location.href; });
+  } catch (e) {}
+
   // BuilderOS webhook — PRIMARY submission for every lead form (no longer
   // depends on Formspree). Submits to the Command Center, then shows the
   // thank-you page on success or a graceful contact message on failure.
@@ -1053,11 +1172,24 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
         data.interest ? `Interest: ${data.interest}` : '',
         data.timeline ? `Timeline: ${data.timeline}` : '',
       ].filter(Boolean).join(' | ');
+      const sms = data.consent_sms === 'yes';
+      const tracking = [
+        data.heard_about ? `Heard about us: ${data.heard_about}` : '',
+        data.lot_address ? `Lot: ${data.lot_address}` : '',
+        `SMS consent: ${sms ? 'YES' : 'NO'}${sms ? ' (' + new Date().toISOString() + ')' : ''}`,
+        data.utm_source ? `UTM source: ${data.utm_source}` : '',
+        data.utm_medium ? `UTM medium: ${data.utm_medium}` : '',
+        data.utm_campaign ? `UTM campaign: ${data.utm_campaign}` : '',
+        data.page_url ? `Page: ${data.page_url}` : '',
+      ].filter(Boolean).join(' | ');
+      const consentText = sms ? 'Yes, text me about my inquiry at the number above. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of any purchase or service.' : '';
       const payload = {
         name: data.name || '',
         email: data.email || '',
         phone: data.phone || '',
-        message: [data.message || '', extra].filter(Boolean).join('\n'),
+        message: [data.message || '', extra, tracking, sms ? 'SMS consent wording: ' + consentText : ''].filter(Boolean).join('\n'),
+        smsConsent: sms, smsConsentText: consentText, heardAbout: data.heard_about || '', lotAddress: data.lot_address || '',
+        utmSource: data.utm_source || '', utmMedium: data.utm_medium || '', utmCampaign: data.utm_campaign || '', pageUrl: data.page_url || '',
         source,
         timeline: data.timeline || '',
         formType: /southbay/i.test(subject) ? 'open-house'

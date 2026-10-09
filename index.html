@@ -198,6 +198,10 @@ section { padding: 90px 0; }
 
 /* LEAD CAPTURE */
 #lead, #lead2 { background: linear-gradient(180deg, rgba(28,28,28,0.03) 0%, rgba(28,28,28,0) 100%); }
+.tour-bar { background: var(--linen); border-bottom: 1px solid rgba(196,168,130,0.28); padding: 22px 0; }
+.tour-bar-inner { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.tour-bar p { font-family: 'Cinzel', serif; font-size: 17px; letter-spacing: 0.04em; color: var(--charcoal); margin: 0; }
+@media (max-width: 560px) { .tour-bar-inner { flex-direction: column; gap: 14px; text-align: center; } }
 .lead-header { text-align: center; margin-bottom: 36px; }
 .lead-header .section-body { margin: 0 auto; }
 .lead-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch; }
@@ -522,6 +526,14 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
     </div>
   </div>
 </section>
+
+<!-- TOUR BAR -->
+<div class="tour-bar">
+  <div class="container tour-bar-inner">
+    <p>Want to see 2608 Southbay in person?</p>
+    <button class="btn-lead" type="button" data-modal-open="spec-modal">Request a Private Tour</button>
+  </div>
+</div>
 
 <!-- SPEC FOR SALE -->
 <section id="spec">
@@ -885,20 +897,20 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
       <p class="section-body">Ready to talk through land, plans, budget, or timing? Tell us where you are in the process and we will help you think through the next step.</p>
     </div>
     <div class="lead-grid">
-      <article class="lead-card">
-        <span class="spec-badge">2608 Southbay</span>
-        <h3>Want additional information or a private tour?</h3>
-        <p class="section-body">Click below and we’ll follow up with the details you need about 2608 Southbay Circle.</p>
-        <div class="lead-actions">
-          <button class="btn-lead" type="button" data-modal-open="spec-modal-new">Request Southbay Info</button>
-        </div>
-      </article>
       <article class="lead-card dark">
         <span class="spec-badge" style="background: var(--linen); color: var(--charcoal);">Custom Builds</span>
         <h3>Thinking about a custom home?</h3>
         <p class="section-body">Tell us a little about your lot, your timeline, and what you want to build. We’ll follow up with the next step.</p>
         <div class="lead-actions">
           <button class="btn-lead" type="button" data-modal-open="build-modal-new">Start Custom Build Conversation</button>
+        </div>
+      </article>
+      <article class="lead-card">
+        <span class="spec-badge">2608 Southbay</span>
+        <h3>Want additional information or a private tour?</h3>
+        <p class="section-body">Click below and we’ll follow up with the details you need about 2608 Southbay Circle.</p>
+        <div class="lead-actions">
+          <button class="btn-lead" type="button" data-modal-open="spec-modal-new">Request Southbay Info</button>
         </div>
       </article>
     </div>

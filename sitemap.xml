@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://sandlinsignature.com/blog/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -51,6 +51,18 @@
   <url>
     <loc>https://sandlinsignature.com/blog/spec-home-vs-custom-build</loc>
     <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sandlinsignature.com/blog/building-on-your-land-denton-county</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sandlinsignature.com/blog/ag-exemption-building-a-home-texas</loc>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
